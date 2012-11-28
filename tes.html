@@ -1,0 +1,708 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"xml:lang="en" lang="en">
+  <head>
+    <title>e-TKJ</title>
+    <script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+	<meta name="description" content="Gaia Free Template Developed by Towfiq I." />
+<meta name="keywords" content="Free Template, Web Development" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/other.js"></script>
+<script type="text/javascript" src="js/gaia.js"></script>
+<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+	$('a.panel').click(function () {
+
+		$('a.panel').removeClass('selected');
+		$(this).addClass('selected');
+		
+		current = $(this);
+				
+		$('#wrapper').scrollTo($(this).attr('href'), 800);		
+		
+		return false;
+	});
+	
+	$(window).resize(function () {
+		resizePanel();
+	});
+	
+});
+
+function resizePanel() {
+
+	width = $(window).width();
+	height = $(window).height();
+
+	mask_height = height * $('.item').length;
+		
+	$('#debug').html(width  + ' ' + height + ' ' + mask_height);
+	
+	$('#wrapper, .item').css({width: width, height: height});
+	$('#mask').css({width: width, height: mask_height});
+	$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+		
+}
+
+</script>
+
+<style type="text/css">
+body {
+	background-image: url(images/bg.png);
+	}
+#wrapper {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	
+	right:1px;
+	background-color:#FFF;
+	overflow:hidden;
+}
+#mask {
+		width:100%;
+		height:500%;
+		overflow:hidden;
+		background-color:#b3e0f3;
+	}
+.item {
+		width:100%;
+		height:20%;
+		display:block;
+		background-color:#b3e0f3;
+	}		
+.content {
+		width:800px;
+		height:600px;
+		top:5%;
+		margin:0 auto;
+		background-color:#b3e0f3;
+		position:relative;
+	}	
+.selected {
+		background:#CCC;
+		font-weight:700;
+	}
+</style>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/style9.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />    
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
+<style type="text/css">
+<!--
+.Stile1 {color: #333333}
+-->
+</style>
+
+ </head>
+  
+<body>
+<!--start container -->
+<div id="container">
+<header>
+	<div class="container">
+      <h1><img src="images/logo.png"/></h1>      
+  			<nav>
+        	<ul>
+          	<li><a href="index.html"><br/><br/><img src="images/home-small.png"></a></li>
+          	<li><a href="tes.html"><br/><br/><img src="images/tes-small.png"></a></li>
+          	<li><a href="us.html"><br/><br/><img src="images/about-small.png"></a></li>
+        	</ul>
+        	</nav>
+    </div>
+</header>
+<form name="form2" action="#">
+<div class="content">
+<div id="wrapper">
+	<div id="mask">
+<script type="text/javascript">
+var myForm=document.form2;
+function soal1(){
+				if(myForm.S1pilA.checked==false && myForm.S1pilB.checked==false && myForm.S1pilC.checked==false && myForm.S1pilD.checked==true && myForm.S1pilE.checked==false)
+				{
+					myForm.respon1.value="Jawaban benar";
+					myForm.S1pilA.disabled="true";
+					myForm.S1pilB.disabled="true";
+					myForm.S1pilC.disabled="true";
+					myForm.S1pilD.disabled="true";
+					myForm.S1pilE.disabled="true";
+					myForm.nilai.value=eval(myForm.nilai.value)+1;
+				}
+				else{
+					myForm.respon1.value="Jawaban salah";
+					myForm.S1pilA.disabled="true";
+					myForm.S1pilB.disabled="true";
+					myForm.S1pilC.disabled="true";
+					myForm.S1pilD.disabled="true";
+					myForm.S1pilE.disabled="true";
+				}
+					
+}
+
+function soal2(){
+				if(myForm.S2pilA.checked==false && myForm.S2pilB.checked==false && myForm.S2pilC.checked==false && myForm.S2pilD.checked==false && myForm.S2pilE.checked==true)
+				{
+					myForm.respon2.value="Jawaban benar";
+					myForm.S2pilA.disabled="true";
+					myForm.S2pilB.disabled="true";
+					myForm.S2pilC.disabled="true";
+					myForm.S2pilD.disabled="true";
+					myForm.S2pilE.disabled="true";
+					myForm.nilai.value=eval(myForm.nilai.value)+1;
+				}
+				else{
+					myForm.respon2.value="Jawaban salah";
+					myForm.S2pilA.disabled="true";
+					myForm.S2pilB.disabled="true";
+					myForm.S2pilC.disabled="true";
+					myForm.S2pilD.disabled="true";
+					myForm.S2pilE.disabled="true";
+				}
+					
+}
+
+function soal3(){
+				if(myForm.S3pilA.checked==false && myForm.S3pilB.checked==false && myForm.S3pilC.checked==false && myForm.S3pilD.checked==true && myForm.S3pilE.checked==false)
+				{
+					myForm.respon3.value="Jawaban benar";
+					myForm.S3pilA.disabled="true";
+					myForm.S3pilB.disabled="true";
+					myForm.S3pilC.disabled="true";
+					myForm.S3pilD.disabled="true";
+					myForm.S3pilE.disabled="true";
+					myForm.nilai.value=eval(myForm.nilai.value)+1;
+				}
+				else{
+					myForm.respon3.value="Jawaban salah";
+					myForm.S3pilA.disabled="true";
+					myForm.S3pilB.disabled="true";
+					myForm.S3pilC.disabled="true";
+					myForm.S3pilD.disabled="true";
+					myForm.S3pilE.disabled="true";
+				}
+					
+}
+function soal4(){
+				if(myForm.S4pilA.checked==false && myForm.S4pilB.checked==true && myForm.S4pilC.checked==false && myForm.S4pilD.checked==false && myForm.S4pilE.checked==false)
+				{
+					myForm.respon4.value="Jawaban benar";
+					myForm.S4pilA.disabled="true";
+					myForm.S4pilB.disabled="true";
+					myForm.S4pilC.disabled="true";
+					myForm.S4pilD.disabled="true";
+					myForm.S4pilE.disabled="true";
+					myForm.nilai.value=eval(myForm.nilai.value)+1;
+				}
+				else{
+					myForm.respon4.value="Jawaban salah";
+					myForm.S4pilA.disabled="true";
+					myForm.S4pilB.disabled="true";
+					myForm.S4pilC.disabled="true";
+					myForm.S4pilD.disabled="true";
+					myForm.S4pilE.disabled="true";
+				}
+					
+}
+
+function soal5(){
+				if(myForm.S5pilA.checked==true && myForm.S5pilB.checked==false && myForm.S5pilC.checked==false && myForm.S5pilD.checked==false && myForm.S5pilE.checked==false)
+				{
+					myForm.respon5.value="Jawaban benar";
+					myForm.S5pilA.disabled="true";
+					myForm.S5pilB.disabled="true";
+					myForm.S5pilC.disabled="true";
+					myForm.S5pilD.disabled="true";
+					myForm.S5pilE.disabled="true";
+					myForm.nilai.value=eval(myForm.nilai.value)+1;
+				}
+				else{
+					myForm.respon5.value="Jawaban salah";
+					myForm.S5pilA.disabled="true";
+					myForm.S5pilB.disabled="true";
+					myForm.S5pilC.disabled="true";
+					myForm.S5pilD.disabled="true";
+					myForm.S5pilE.disabled="true";
+				}
+					
+}
+
+function soal6(){
+				if(myForm.S6pilA.checked==false && myForm.S6pilB.checked==false && myForm.S6pilC.checked==false && myForm.S6pilD.checked==true && myForm.S6pilE.checked==false)
+				{
+					myForm.respon6.value="Jawaban benar";
+					myForm.S6pilA.disabled="true";
+					myForm.S6pilB.disabled="true";
+					myForm.S6pilC.disabled="true";
+					myForm.S6pilD.disabled="true";
+					myForm.S6pilE.disabled="true";
+					myForm.nilai.value=eval(myForm.nilai.value)+1;
+				}
+				else{
+					myForm.respon6.value="Jawaban salah";
+					myForm.S6pilA.disabled="true";
+					myForm.S6pilB.disabled="true";
+					myForm.S6pilC.disabled="true";
+					myForm.S6pilD.disabled="true";
+					myForm.S6pilE.disabled="true";
+				}
+					
+}
+
+function soal7(){
+				if(myForm.S7pilA.checked==true && myForm.S7pilB.checked==false && myForm.S7pilC.checked==false && myForm.S7pilD.checked==false && myForm.S7pilE.checked==false)
+				{
+					myForm.respon7.value="Jawaban benar";
+					myForm.S7pilA.disabled="true";
+					myForm.S7pilB.disabled="true";
+					myForm.S7pilC.disabled="true";
+					myForm.S7pilD.disabled="true";
+					myForm.S7pilE.disabled="true";
+					myForm.nilai.value=eval(myForm.nilai.value)+1;
+				}
+				else{
+					myForm.respon7.value="Jawaban salah";
+					myForm.S7pilA.disabled="true";
+					myForm.S7pilB.disabled="true";
+					myForm.S7pilC.disabled="true";
+					myForm.S7pilD.disabled="true";
+					myForm.S7pilE.disabled="true";
+				}
+					
+}
+
+function soal8(){
+				if(myForm.S8pilA.checked==false && myForm.S8pilB.checked==false && myForm.S8pilC.checked==false && myForm.S8pilD.checked==true && myForm.S8pilE.checked==false)
+				{
+					myForm.respon8.value="Jawaban benar";
+					myForm.S8pilA.disabled="true";
+					myForm.S8pilB.disabled="true";
+					myForm.S8pilC.disabled="true";
+					myForm.S8pilD.disabled="true";
+					myForm.S8pilE.disabled="true";
+					myForm.nilai.value=eval(myForm.nilai.value)+1;
+				}
+				else{
+					myForm.respon8.value="Jawaban salah";
+					myForm.S8pilA.disabled="true";
+					myForm.S8pilB.disabled="true";
+					myForm.S8pilC.disabled="true";
+					myForm.S8pilD.disabled="true";
+					myForm.S8pilE.disabled="true";
+				}
+					
+}
+
+function soal9(){
+				if(myForm.S9pilA.checked==false && myForm.S9pilB.checked==false && myForm.S9pilC.checked==false && myForm.S9pilD.checked==false && myForm.S9pilE.checked==true)
+				{
+					myForm.respon9.value="Jawaban benar";
+					myForm.S9pilA.disabled="true";
+					myForm.S9pilB.disabled="true";
+					myForm.S9pilC.disabled="true";
+					myForm.S9pilD.disabled="true";
+					myForm.S9pilE.disabled="true";
+					myForm.nilai.value=eval(myForm.nilai.value)+1;
+				}
+				else{
+					myForm.respon9.value="Jawaban salah";
+					myForm.S9pilA.disabled="true";
+					myForm.S9pilB.disabled="true";
+					myForm.S9pilC.disabled="true";
+					myForm.S9pilD.disabled="true";
+					myForm.S9pilE.disabled="true";
+				}
+					
+}
+
+function soal10(){
+				if(myForm.S10pilA.checked==false && myForm.S10pilB.checked==false && myForm.S10pilC.checked==false && myForm.S10pilD.checked==true && myForm.S10pilE.checked==false)
+				{
+					myForm.respon10.value="Jawaban benar";
+					myForm.S10pilA.disabled="true";
+					myForm.S10pilB.disabled="true";
+					myForm.S10pilC.disabled="true";
+					myForm.S10pilD.disabled="true";
+					myForm.S10pilE.disabled="true";
+					myForm.nilai.value=eval(myForm.nilai.value)+1;
+				}
+				else{
+					myForm.respon10.value="Jawaban salah";
+					myForm.S10pilA.disabled="true";
+					myForm.S10pilB.disabled="true";
+					myForm.S10pilC.disabled="true";
+					myForm.S10pilD.disabled="true";
+					myForm.S10pilE.disabled="true";
+				}
+					
+}
+
+</script>
+
+
+	<div id="middlerow">
+		<div class="center">
+		
+			<div id="sliderbg">
+				<div id="slider">
+					<ul>
+						<!--petunjuk-->
+						<li  id="item0">
+							<span>
+								<table width="300px" height="250px" align="center">
+									<tr>
+										<td align="center">
+											<a class="slideh1"><font color=#1106A1>Petunjuk Pengerjaan Soal</font></a>
+										</td>	
+									</tr>
+									<tr align="center">
+										<td align="center">
+											<a class="slideh1">Silahkan pilih satu jawaban yang benar, kemudian klik "check" untuk memberikan balikan.</a>
+										</td>
+									</tr>
+								</table>
+							</span>
+							<p>
+								<a class="slideh1">
+									<input type="checkbox" value="" />Jawaban A <br/>
+									<input type="checkbox" value="" />Jawaban B <br/>
+									<input type="checkbox" value="" />Jawaban C <br/>
+									<input type="checkbox" value="" />Jawaban D </br>
+									<input type="checkbox" value="" />Jawaban E</br>
+								</a>
+								<input type="text" name="respon" value="Jawaban Benar/Salah" width="600px" height="100px"/><br/><br/>
+								<a><img src="images/check-btn.png"></a>
+							</p>
+						</li>
+					
+					
+						<!--soal 1-->
+						<li  id="item1">
+							<span>
+								<table width="300px" height="250px" align="center">
+									<tr>
+										<td align="center">
+											<a class="slideh1"><font color=#1106A1>Soal 1</font></a>
+										</td>	
+									</tr>
+									<tr align="center">
+										<td align="center">
+											<a class="slideh1">Pada saat menghidupkankan komputer, apa yang harus dilakukan agar komputer dapat menyala?</a>
+										</td>
+									</tr>
+								</table>
+							</span>
+							<p>
+								<a class="slideh1">
+									<input name="S1pilA" type="checkbox" value="" />Tekan tombol power monitor <br/>
+									<input name="S1pilB" type="checkbox" value="" />Pasang arus listrik <br/>
+									<input name="S1pilC" type="checkbox" value="" />Tekan tombol power CPU <br/>
+									<input name="S1pilD" type="checkbox" value="" />Aliri arus, tekan power CPU & monitor </br>
+									<input name="S1pilE" type="checkbox" value="" />Tekan reset</br>
+								</a>
+								<input type="text" name="respon1" value="" width="600px" height="100px"/><br/><br/>
+								<a onclick="soal1()"><img src="images/check-btn.png"></a>
+							</p>
+						</li>
+						<!--soal 2-->
+						<li  id="item2">
+							<span>
+								<table width="300px" height="250px" align="center">
+									<tr>
+										<td align="center">
+											<a class="slideh1"><font color=#1106A1>Soal 2</font></a>
+										</td>	
+									</tr>
+									<tr align="center">
+										<td align="center">
+											<a class="slideh1">Pada  saat menghidupkan komputer maka akan masuk ke dalam sistem operasi. Pada saat proses masuk ke dalam sistem disebut…</a>
+										</td>
+									</tr>
+								</table>
+							</span>
+							<p>
+								<a class="slideh1">
+									<input name="S2pilA" type="checkbox" value="" />Boot secuence<br/>
+									<input name="S2pilB" type="checkbox" value="" />Bootable <br/>
+									<input name="S2pilC" type="checkbox" value="" />Boot RAM <br/>
+									<input name="S2pilD" type="checkbox" value="" />Hank </br>
+									<input name="S2pilE" type="checkbox" value="" />Booting</br>
+								</a>
+								<input type="text" name="respon2" value="" width="600px" height="100px"/><br/><br/>
+								<a onclick="soal2()"><img src="images/check-btn.png"></a>
+							</p>
+						</li>
+						<!--soal 3-->
+						<li  id="item3">
+							<span>
+								<table width="300px" height="250px" align="center">
+									<tr>
+										<td align="center">
+											<a class="slideh1"><font color=#1106A1>Soal 3</font></a>
+										</td>	
+									</tr>
+									<tr align="center">
+										<td align="center">
+											<a class="slideh1">Jika pada saat sistem tidak dapat bekerja dengan baik sehingga kita tidak bisa menjalankan/menutup sebuah aplikasi, maka pada komputer terjadi…</a>
+										</td>
+									</tr>
+								</table>
+							</span>
+							<p>
+								<a class="slideh1">
+									<input name="S3pilA" type="checkbox" value="" />Boot secuence<br/>
+									<input name="S3pilB" type="checkbox" value="" />Bootable <br/>
+									<input name="S3pilC" type="checkbox" value="" />Boot RAM <br/>
+									<input name="S3pilD" type="checkbox" value="" />Hank </br>
+									<input name="S3pilE" type="checkbox" value="" />Booting</br>
+								</a>
+								<input type="text" name="respon3" value="" width="600px" height="100px"/><br/><br/>
+								<a onclick="soal3()"><img src="images/check-btn.png"></a>
+							</p>
+						</li>
+						<!--soal 4-->
+						<li  id="item4">
+							<span>
+								<table width="300px" height="250px" align="center">
+									<tr>
+										<td align="center">
+											<a class="slideh1"><font color=#1106A1>Soal 4</font></a>
+										</td>	
+									</tr>
+									<tr align="center">
+										<td align="center">
+											<a class="slideh1">Ketika kita pencet tombol "E" pada waktu menjalankan Microsoft Word, tiba-tiba huruf "E" tidak bisa muncul. Maka hal ini terjadi kerusakan pada …</a>
+										</td>
+									</tr>
+								</table>
+							</span>
+							<p>
+								<a class="slideh1">
+									<input name="S4pilA" type="checkbox" value="" />Mouse<br/>
+									<input name="S4pilB" type="checkbox" value="" />Keyboard <br/>
+									<input name="S4pilC" type="checkbox" value="" />Notepad <br/>
+									<input name="S4pilD" type="checkbox" value="" />Harddisk </br>
+									<input name="S4pilE" type="checkbox" value="" />Motherboard</br>
+								</a>
+								<input type="text" name="respon4" value="" width="600px" height="100px"/><br/><br/>
+								<a onclick="soal4()"><img src="images/check-btn.png"></a>
+							</p>
+						</li>
+						<!--soal 5-->
+						<li  id="item5">
+							<span>
+								<table width="300px" height="250px" align="center">
+									<tr>
+										<td align="center">
+											<a class="slideh1"><font color=#1106A1>Soal 5</font></a>
+										</td>	
+									</tr>
+									<tr align="center">
+										<td align="center">
+											<a class="slideh1">Pada saat sistem menjalankan program Winamp, kita juga bisa melakukan/menjalankan program yang lainnya seperti Ms.Word, Corel Draw, Ms.Excel dan lain-lain. Peristiwa tersebut dinamakan sistem yang…</a>
+										</td>
+									</tr>
+								</table>
+							</span>
+							<p>
+								<a class="slideh1">
+									<input name="S5pilA" type="checkbox" value="" />Multi Tasking<br/>
+									<input name="S5pilB" type="checkbox" value="" />Double Multi <br/>
+									<input name="S5pilC" type="checkbox" value="" />Read/Write <br/>
+									<input name="S5pilD" type="checkbox" value="" />Sistem ganda </br>
+									<input name="S5pilE" type="checkbox" value="" />Hank</br>
+								</a>
+								<input type="text" name="respon5" value="" width="600px" height="100px"/><br/><br/>
+								<a onclick="soal5()"><img src="images/check-btn.png"></a>
+							</p>
+						</li>
+						<!--soal 6-->
+						<li  id="item6">
+							<span>
+								<table width="300px" height="250px" align="center">
+									<tr>
+										<td align="center">
+											<a class="slideh1"><font color=#1106A1>Soal 6</font></a>
+										</td>	
+									</tr>
+									<tr align="center">
+										<td align="center">
+											<a class="slideh1">Ctrl + Alt + Del adalah salah satu cara untuk masuk kedalam jendela…</a>
+										</td>
+									</tr>
+								</table>
+							</span>
+							<p>
+								<a class="slideh1">
+									<input name="S6pilA" type="checkbox" value="" />Shut down<br/>
+									<input name="S6pilB" type="checkbox" value="" />Log off <br/>
+									<input name="S6pilC" type="checkbox" value="" />Start up <br/>
+									<input name="S6pilD" type="checkbox" value="" />End task manager </br>
+									<input name="S6pilE" type="checkbox" value="" />Refresh</br>
+								</a>
+								<input type="text" name="respon6" value="" width="600px" height="100px"/><br/><br/>
+								<a onclick="soal6()"><img src="images/check-btn.png"></a>
+							</p>
+						</li>
+						<!--soal 7-->
+						<li  id="item7">
+							<span>
+								<table width="300px" height="250px" align="center">
+									<tr>
+										<td align="center">
+											<a class="slideh1"><font color=#1106A1>Soal 7</font></a>
+										</td>	
+									</tr>
+									<tr align="center">
+										<td align="center">
+											<a class="slideh1">Jika PC mengalami suatu masalah maka akan dapat terdeteksi gejala kesalahannya melalui…</a>
+										</td>
+									</tr>
+								</table>
+							</span>
+							<p>
+								<a class="slideh1">
+									<input name="S7pilA" type="checkbox" value="" />POST<br/>
+									<input name="S7pilB" type="checkbox" value="" />Booting <br/>
+									<input name="S7pilC" type="checkbox" value="" />Error <br/>
+									<input name="S7pilD" type="checkbox" value="" />Hank </br>
+									<input name="S7pilE" type="checkbox" value="" />Mati</br>
+								</a>
+								<input type="text" name="respon7" value="" width="600px" height="100px"/><br/><br/>
+								<a onclick="soal7()"><img src="images/check-btn.png"></a>
+							</p>
+						</li>
+						<!--soal 8-->
+						<li  id="item8">
+							<span>
+								<table width="300px" height="250px" align="center">
+									<tr>
+										<td align="center">
+											<a class="slideh1"><font color=#1106A1>Soal 8</font></a>
+										</td>	
+									</tr>
+									<tr align="center">
+										<td align="center">
+											<a class="slideh1">Jika proses POST telah berhasil maka sistem akan masuk ke…</a>
+										</td>
+									</tr>
+								</table>
+							</span>
+							<p>
+								<a class="slideh1">
+									<input name="S8pilA" type="checkbox" value="" />BIOS<br/>
+									<input name="S8pilB" type="checkbox" value="" />Award BIOS <br/>
+									<input name="S8pilC" type="checkbox" value="" />AMI BIOS <br/>
+									<input name="S8pilD" type="checkbox" value="" />Windows </br>
+									<input name="S8pilE" type="checkbox" value="" />Sistem</br>
+								</a>
+								<input type="text" name="respon8" value="" width="600px" height="100px"/><br/><br/>
+								<a onclick="soal8()"><img src="images/check-btn.png"></a>
+							</p>
+						</li>
+						<!--soal 9-->
+						<li  id="item9">
+							<span>
+								<table width="300px" height="250px" align="center">
+									<tr>
+										<td align="center">
+											<a class="slideh1"><font color=#1106A1>Soal 9</font></a>
+										</td>	
+									</tr>
+									<tr align="center">
+										<td align="center">
+											<a class="slideh1">Jika sebuah komputer ditemukan gejala CPU mati dan tidak ada bunyi beep, maka apa kemungkinan kerusakan yang terjadi?</a>
+										</td>
+									</tr>
+								</table>
+							</span>
+							<p>
+								<a class="slideh1">
+									<input name="S9pilA" type="checkbox" value="" />Problem di memori<br/>
+									<input name="S9pilB" type="checkbox" value="" />Kerusakan pada modul RAM<br/>
+									<input name="S9pilC" type="checkbox" value="" />Kerusakan Harddisk<br/>
+									<input name="S9pilD" type="checkbox" value="" />PC dalam keadaan baik </br>
+									<input name="S9pilE" type="checkbox" value="" />Power supply</br>
+								</a>
+								<input type="text" name="respon9" value="" width="600px" height="100px"/><br/><br/>
+								<a onclick="soal9()"><img src="images/check-btn.png"></a>
+							</p>
+						</li>
+						<!--soal 10-->
+						<li  id="item10">
+							<span>
+								<table width="300px" height="250px" align="center">
+									<tr>
+										<td align="center">
+											<a class="slideh1"><font color=#1106A1>Soal 10</font></a>
+										</td>	
+									</tr>
+									<tr align="center">
+										<td align="center">
+											<a class="slideh1">Jika terdapat sebuah kasus pada <i>setting</i> jam, tanggal, bulan, tahun berubah. Maka kerusakan terjadi pada…</a>
+										</td>
+									</tr>
+								</table>
+							</span>
+							<p>
+								<a class="slideh1">
+									<input name="S10pilA" type="checkbox" value="" />BIOS<br/>
+									<input name="S10pilB" type="checkbox" value="" />South Bridge<br/>
+									<input name="S10pilC" type="checkbox" value="" />North Bridge<br/>
+									<input name="S10pilD" type="checkbox" value="" />Baterai C-MOS </br>
+									<input name="S10pilE" type="checkbox" value="" />Komputer</br>
+								</a>
+								<input type="text" name="respon10" value="" width="600px" height="100px"/><br/><br/>
+								<a onclick="soal10()"><img src="images/check-btn.png"></a>
+							</p>
+						</li>
+						
+						
+						<!--nilai-->
+						<li  id="item11">
+							<span><img alt="slide1" src="images/tesx.jpg" width="408" height="262" />
+							</span>
+							<p>
+								<a class="slideh1">
+								<p><a class="slideh1">Selamat, Anda telah menyelesaikan evaluasi kali ini :)</a>
+								</a>
+								<!--
+								<input type="text" name="respon10" value="" width="600px" height="100px"/><br/><br/>
+								<a onclick="soal10()"><img src="images/check-btn.png"></a>
+								-->
+							</p>
+						</li>
+						
+					</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="item11" class="item">
+	<a name="item11"></a>
+	<div class="content" align="center"><font color=#1106A1>
+        Skor
+		</font><input type="text" name="nilai" value="0"/>
+        </div>
+</div>
+        
+	</div>
+</div>
+</div>
+</form>
+</div>
+<footer>  
+ 
+</footer>
+  </body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+</html>
+
