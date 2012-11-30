@@ -15,4 +15,4 @@ disetiap helaman terdapat tiga menu, yaitu Home, Tes, dan About Us.
 B. Deskripsi Teknis
 Website ini dikembangkan dengan menggunakan HTML, css, dan jquery (v1.3.1, v1.4.2)
 
-http://www.github.com/riatri/kuis.git
+Demo URL : http://evalusitekaje.host22.com/kuis/index.html
